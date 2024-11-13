@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <title>Input_image by user</title>
+    <link rel="stylesheet" href="style_img.css">
+</head>
+<body>
+    <div class="plant">
+        <div class="card">
+            <h1>Medicinal Plant Identification...</h1>
+            <p>Let's take input from the user</p>
+            <img src="public\ellipse-10@2x.png" alt="img" id="profile-pic">
+
+            <label for="input-file">Upload Image</label>
+            <input type="file" accept="image/jpeg, image/jpg, image/png" id="input-file">
+
+        </div>
+    </div>
+
+    <script>
+    let profilePic = document.getElementById("profile-pic");
+    let inputFile = document.getElementById("input-file");
+
+    inputFile.onchange = function(){
+        profilePic.src = URL.createObjectURL(inputFile.files[0])
+    }
+    </script>
+</body>
+</html>
